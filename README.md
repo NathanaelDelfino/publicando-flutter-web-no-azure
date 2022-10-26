@@ -35,3 +35,51 @@ Por em quanto vamos seguir em frente, mas vamos voltar a utilizar essa pasta em 
 Agora vamos para a criação no projeto em Node.Js que irá executar e exibir nosso projeto em Flutter nos serviços do Azure. 
 (_obs: Até a criação desse tutorial, ainda não se é possível subir de maneira nativa ou direta as aplicações geradas no flutter web, para isso que iremos criar uma aplicação em nodejs._)
 
+Com o nodejs instalado em nossa maquina vamos criar um projeto em Node que irá amazenar nossa aplicação (_obs: não se esqueça de apontar para uma pasta separada dos fontes do seu projeto em flutter, para não misturar os projetos_)
+
+O primeiro comando a ser executado é executar o comando que irá o comando que irá criar o projeto em node:
+
+```
+npx express-generator ProjetoNodeDoProjetoQueIraRodarNossoAplicativoFlutter --view ejs
+```
+
+<p align="center">
+<img  src="https://user-images.githubusercontent.com/7662248/198144421-a19eb34f-6888-444b-9321-e85ebd490c5f.png">
+</p>
+
+Na sequencia vamos mandar ele gerar todos os pacotes necessários para execução
+```
+cd ProjetoNodeDoProjetoQueIraRodarNossoAplicativoFlutter && npm install
+```
+
+<p align="center">
+<img  src="https://user-images.githubusercontent.com/7662248/198145075-102aa8d4-0e86-4409-9e01-795c93fe17a8.png">
+</p>
+
+Para validar se o projeto foi criado e teve seus pacotes restaurado com sucesso, podemos executar o seguinte comando.
+```
+DEBUG=ProjetoNodeDoProjetoQueIraRodarNossoAplicativoFlutter:* npm start
+```
+_obs: Se você estiver dentro da pasta ProjetoNodeDoProjetoQueIraRodarNossoAplicativoFlutter, execute apenas npm start_
+
+Se estiver tudo certo, ao carregar a url http://localhost:3000/ irá exibir a seguinte tela 
+
+<p align="center">
+<img  src="https://user-images.githubusercontent.com/7662248/198145789-432a35b2-a5f5-44f9-a065-0d34e8cda8bc.png">
+</p>
+
+Com o projeto em node criado, agora vamos criar uma pasta chamada "flutter-web" dentro da pasta do nosso projeto, em seguida vamos pegar os itens de dentro da pasta web criada pelo nosso build do projeto em flutter, na sequencia colar dentro da nossa pasta "flutter-web".
+
+<p align="center">
+<img  src="https://user-images.githubusercontent.com/7662248/198146485-14d82558-486f-479a-864f-99dc69233a59.png">
+</p>
+<p align="center">
+_imagem de exemplo da pasta criada_
+</p>
+
+<p align="center">
+<img  src="https://user-images.githubusercontent.com/7662248/198146684-bc1f46c7-c97d-4865-865e-b3358934c248.png">
+</p>
+<p align="center">
+_imagem de exemplo dos arquivos copiados para pasta_
+</p>
