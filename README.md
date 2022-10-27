@@ -200,10 +200,8 @@ Agora só é necessiario que reiniciemos nosso serviço de aplicação no portal
 Se tudo estiver certo agora podemos acessar no aplicação flutter rodando, por meio do endereço que definimos ao criar o serviço, no meu caso https://flutter-web-no-azure.azurewebsites.net , e é isso.
 
 <p align="center">
-<img  src="[https://user-images.githubusercontent.com/7662248/198338600-ee490790-ae23-4478-94e3-2c6abb955db5.png](https://user-images.githubusercontent.com/7662248/198339885-e022b8c0-61fb-4acc-a517-5a986a71536e.png)">
+<img  src="https://user-images.githubusercontent.com/7662248/198340099-ec5f4308-033b-4cce-bc9d-04f0cc2b3ca1.png">
 </br><i>Aplicação rodando</i>
 </p>
-
-
 
 Its all Folks! ✌️
