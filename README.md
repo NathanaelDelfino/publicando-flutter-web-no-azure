@@ -11,6 +11,12 @@ Um estudo de como subir uma aplicação web feita em flutter, como aplicação n
 <img  src="https://user-images.githubusercontent.com/7662248/198142894-28e61214-0308-4de4-a174-f67f2a534c61.png">
 </p>
 
+
+
+<div align="center">
+<h1><b>Coisas a se fazer no flutter</b></h1>
+</div>
+
 Com a aplicação em flutter criada o primeiro passo para a publicação é realizar o _build web_ da aplicação. Então na sua IDE ou via CMD (com a pasta do flutter setada) execute : 
 
 ```
@@ -31,6 +37,11 @@ Apos gerar o comando o flutter ira criar uma pasta chamada **Web** dentro da pas
 </p>
 
 Por em quanto vamos seguir em frente, mas vamos voltar a utilizar essa pasta em outro momento.
+
+
+<div align="center">
+<h1><b>Coisas a se fazer no NodeJS</b></h1>
+</div>
 
 Agora vamos para a criação no projeto em Node.Js que irá executar e exibir nosso projeto em Flutter nos serviços do Azure. 
 (_obs: Até a criação desse tutorial, ainda não se é possível subir de maneira nativa ou direta as aplicações geradas no flutter web, para isso que iremos criar uma aplicação em nodejs._)
@@ -74,12 +85,16 @@ Com o projeto em node criado, agora vamos criar uma pasta chamada "flutter-web" 
 <img  src="https://user-images.githubusercontent.com/7662248/198146485-14d82558-486f-479a-864f-99dc69233a59.png">
 </p>
 <p align="center">
-_imagem de exemplo da pasta criada_
+<i>imagem de exemplo da pasta criada</i>
 </p>
 
 <p align="center">
 <img  src="https://user-images.githubusercontent.com/7662248/198146684-bc1f46c7-c97d-4865-865e-b3358934c248.png">
 </p>
 <p align="center">
-_imagem de exemplo dos arquivos copiados para pasta_
+<i>imagem de exemplo dos arquivos copiados para pasta</i>
 </p>
+
+<div align="center">
+<h1><b>Coisas a se fazer no Portal Azure</b></h1>
+</div>
