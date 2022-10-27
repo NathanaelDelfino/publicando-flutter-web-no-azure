@@ -98,3 +98,11 @@ Com o projeto em node criado, agora vamos criar uma pasta chamada "flutter-web" 
 <div align="center">
 <h1><b>Coisas a se fazer no Portal Azure</b></h1>
 </div>
+
+Para hospedar nossa aplicação no portal do azure vamos escolher o modelo de serviço como *Serviços de aplicativos*. 
+
+<p align="center">
+<img  src="https://user-images.githubusercontent.com/7662248/198321701-2c3f8927-9073-4e31-8fb6-f7ec3eff471f.png">
+</p>
+
+Na criação do nosso serviço de aplicativos, vamos definir nosso grupo de recursos (Um grupo de recursos é um conjunto de recursos que compartilham o mesmo ciclo de vida, permissões e políticas.), definir o nome da nossa aplicação, selecionar o nome da nossa aplicação 
