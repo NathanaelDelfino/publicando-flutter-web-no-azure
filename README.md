@@ -6,6 +6,7 @@ Um estudo de como subir uma aplicação web feita em flutter, como aplicação n
 
 * Flutter 3.3.5
 * NodeJs 16.18.0
+* Fillezila 
 
 <p align="center">
 <img  src="https://user-images.githubusercontent.com/7662248/198142894-28e61214-0308-4de4-a174-f67f2a534c61.png">
@@ -95,6 +96,32 @@ Com o projeto em node criado, agora vamos criar uma pasta chamada "flutter-web" 
 <i>imagem de exemplo dos arquivos copiados para pasta</i>
 </p>
 
+Agora temos de abrir o nosso projeto (Eu utilzei o VS Code), somente para alterar a pasta public para pasta que contem os arquivos do nosso projeto em flutter
+
+<p align="center">
+<img  src="https://user-images.githubusercontent.com/7662248/198334269-19797541-2cf1-4746-9e68-7db52a5238d8.png">
+</br><i>Parte do código que deve ter seu nome trocado</i>
+</p>
+
+Note que não foi mexido em nada além do nome da pasta.
+
+<p align="center">
+<img  src="https://user-images.githubusercontent.com/7662248/198334577-006ef012-711a-400f-8729-0e9a8bbf92bd.png">
+</br><i>Parte do código que deve ter seu nome trocado</i>
+</p>
+
+Caso queira garantir que está tudo certo, bastar executar no terminal o comando:
+```
+npm start
+```
+e carregar no seu navegador http://localhost:3000/#/ , onde irá lhe carregar a pagina o consolle do seu terminal ira ficar como na imagem a baixo
+
+<p align="center">
+<img  src="https://user-images.githubusercontent.com/7662248/198335452-8177e06d-db8f-49ff-b378-78e888751ea0.png">
+</br><i>Tudo funcionando</i>
+</p>
+
+
 <div align="center">
 <h1><b>Coisas a se fazer no Portal Azure</b></h1>
 </div>
@@ -105,4 +132,71 @@ Para hospedar nossa aplicação no portal do azure vamos escolher o modelo de se
 <img  src="https://user-images.githubusercontent.com/7662248/198321701-2c3f8927-9073-4e31-8fb6-f7ec3eff471f.png">
 </p>
 
-Na criação do nosso serviço de aplicativos, vamos definir nosso grupo de recursos (Um grupo de recursos é um conjunto de recursos que compartilham o mesmo ciclo de vida, permissões e políticas.), definir o nome da nossa aplicação, selecionar o nome da nossa aplicação 
+Na criação do nosso serviço de aplicativos, vamos definir nosso grupo de recursos (Um grupo de recursos é um conjunto de recursos que compartilham o mesmo ciclo de vida, permissões e políticas.), definir o nome da nossa aplicação, selecionar o nome da nossa aplicação, podemos deixar a publicação como código mesmo e selecionamos o serviço Node que irá executar nossa aplicação Web.
+
+<p align="center">
+<img  src="https://user-images.githubusercontent.com/7662248/198328149-f03c6a24-2138-4873-9664-2acef07083d6.png">
+</p>
+<p align="center">
+<i>exemplo das configurações utilizadas</i>
+</p>
+
+Com as configurações definidas, podemos ir direto em *Revisar + Criar*, e podemos ir direto em criar na sequencia. 
+Ao clicar em criar irá nos ser exibido a seguinte mensagem
+
+<p align="center">
+<img  src="https://user-images.githubusercontent.com/7662248/198329383-d8c4960f-0f88-4b1d-952e-9e8e71f3c435.png">
+</br><i>criando o serviço</i>
+</p>
+
+
+Com o serviço criado, ao clicar no link vamos ter a seguinte o retorno
+<p align="center">
+<img  src="https://user-images.githubusercontent.com/7662248/198331205-57829c5b-cd77-4671-80f5-db3767735a1b.png">
+</br><i>Serviço hospedado rodando</i>
+</p>
+
+Agora podemos ir em Centro de implantação, para pegar os dados necessários para subir no aplicativo.
+
+<p align="center">
+<img  src="https://user-images.githubusercontent.com/7662248/198330747-30838644-a6b1-4213-a426-6e61d8ffce66.png">
+</br><i>Centro de implantação</i>
+</p>
+
+No centro de implantação vamos ter três opções Settings, Logs e FTPS Credentials. A opção que vamos utilizar é a *FTPS credentials*, nela irá conter os dados necessários para que possamos subir os arquivos de nossa aplicação.
+
+<p align="center">
+<img  src="https://user-images.githubusercontent.com/7662248/198332049-7829c016-bb63-4d39-bfac-d0468352e6df.png">
+</br><i>FTPS credentials</i>
+</p>
+
+No meu caso eu configurei o Filezilla como ferramenta para subir os arquivos para o site
+
+<p align="center">
+<img  src="https://user-images.githubusercontent.com/7662248/198332628-dde8d987-d1ac-4727-b708-48bf522843f2.png">
+</br><i>Configuração realizada no FileZilla</i>
+</p>
+
+O próximo passo é basicamente pegar a pasta que configuramos o projeto em node, e subir para o FTPS no azure
+<p align="center">
+<img  src="https://user-images.githubusercontent.com/7662248/198333331-8bc27b3f-0694-4853-989a-c7ea887626d0.png">
+</br><i>arquivos do projeto</i>
+</p>
+
+
+ Após subir nossos arquivos podemos apagar o arquivo *hostingstart.html* que é um arquivo que o azure sobe quando criando a nosso serviço de aplicação
+<p align="center">
+<img  src="https://user-images.githubusercontent.com/7662248/198337265-e0da40e0-33ab-4e9d-af83-d7f9fa601b64.png">
+</br><i>apagar o arquivo hostingstart.html</i>
+</p>
+
+Agora só é necessiario que reiniciemos nosso serviço de aplicação no portal do azure, para isso basta ir na *OPÇÃO GERAL* e clicar em reiniciar na sequencia. 
+<p align="center">
+<img  src="https://user-images.githubusercontent.com/7662248/198338600-ee490790-ae23-4478-94e3-2c6abb955db5.png">
+</br><i>Reiniciando aplicação</i>
+</p>
+
+
+Se tudo estiver certo agora podemos acessar no aplicação flutter rodando, por meio do endereço que definimos ao criar o serviço, no meu caso https://flutter-web-no-azure.azurewebsites.net , e é isso.
+
+Its all Folks! ✌️
